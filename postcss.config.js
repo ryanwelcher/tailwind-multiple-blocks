@@ -3,7 +3,20 @@ module.exports = {
 		'postcss-multiple-tailwind': {
 			mode: 'auto',
 		},
-		autoprefixer: {},
-		...(process.env.NODE_ENV === 'production' ? { cssnano: {} } : {}),
+		autoprefixer: { grid: true },
+		...(process.env.NODE_ENV === 'production'
+			? {
+					cssnano: {
+						preset: [
+							'default',
+							{
+								discardComments: {
+									removeAll: true,
+								},
+							},
+						],
+					},
+			  }
+			: {}),
 	},
 };
