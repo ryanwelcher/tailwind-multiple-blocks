@@ -1,3 +1,7 @@
 module.exports = {
-	plugins: [require('postcss-multiple-tailwind'), require('autoprefixer')],
+	plugins: {
+		'postcss-multiple-tailwind': {},
+		autoprefixer: {},
+		...(process.env.NODE_ENV === 'production' ? { cssnano: {} } : {}),
+	},
 };
