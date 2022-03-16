@@ -1,5 +1,5 @@
 module.exports = {
-	content: ['./src/block-one/*.{html,js}'],
+	content: ['./src/block-one/*js'],
 	theme: {
 		extend: {},
 	},

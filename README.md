@@ -14,3 +14,10 @@ Once set up, all of the standard commands from `@wordpress/scripts` will work no
 
 1. `npm start` - starts the dev build process in watch mode
 2. `npm run build` - Build the files for production.
+
+
+## Adding more blocks
+
+1. Create a new directory in the `src` folder
+2. Add all of the files needed for a new block
+3. Ensure that there is a `tailwind.config.js` file in the new folder with `content` set to the path to the new folder relative to the root - `content: ['./src/FOLDER_NAME/*.{html,js}'],`
